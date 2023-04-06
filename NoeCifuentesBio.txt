@@ -1,0 +1,1 @@
+My name is Noe Cifuentes, my team and I are creating a mobile app made to streamline roommate communication that will allow the users to do a variaety of tasks. I will be working on the backend development and the UI of the app. 
