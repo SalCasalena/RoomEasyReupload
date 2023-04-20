@@ -1,0 +1,33 @@
+:root{
+    --primary-clr: #b38add
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box0;
+    fond-family: "Poppins", sans-serif;
+
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: honeydew;
+}
+
+.container {
+    position: relative;
+    width: 1200px;
+    min-height: 850px;
+    margin: 0 auto;
+    padding: 5px;
+    color: honeydew;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: honeydew;
+    border-radius: 5px;
+}
