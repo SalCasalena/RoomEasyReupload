@@ -1,22 +1,39 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" >
 <head>
-    <title>
-        Login and Registration form</title>
-    <link rel="stylesheet" href="main.css"> 
+  <meta charset="UTF-8">
+  <title>Login Page with Background Image Example</title>
+  <link rel="stylesheet" href="./main.css">
+
 </head>
 <body>
-    <div class = "hero">
-        <div class="form-box">
-            <div class="button-box">
-                <div id="btn"></div>
-                <button type="button" class="toggle-btn"> Back already? Log in</button>
-                <button type="button" class="toggle-btn"> New user? Register</button>
-            </div>
-        </div>
-    </div>
+<div id="bg"></div>
 
+<<<<<<< HEAD
     
 
+=======
+<form>
+  
+>>>>>>> 7e317a85eacc61c3f75c60c9dcdf3ff5e4a5f9e5
 
+  <div class="form-field">
+    <input type="email" placeholder="Email / Username" required/>
+  </div>
+  
+  <div class="form-field">
+    <input type="password" placeholder="Password" required/>                         </div>
+  
+  <div class="form-field">
+    <button onclick="auth()" class="btn" type="submit">Log in</button>
+  </div>
+  <script>
+    function auth(){
+      window.location.assign("pages/index.html");
+    }
+  </script>
+  <img src="images/roomeasyLOGO.png" alt="" class="logoStyle">
+</form>
+  
 </body>
 </html>
