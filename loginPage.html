@@ -27,7 +27,7 @@
                         </div>
                         <br>
                         <div class="form-field">
-                        <button class="btn" type="submit" id="signUp">Log in</button>
+                        <button onclick="nextPage()" >Log in</button>
                         </div>
                         <script>
                             function nextPage(){
@@ -79,7 +79,8 @@
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-                    alert('User created');
+                    window.location.assign("pages/index.html");
+                    
                     // ...
                 })
                 .catch((error) => {
