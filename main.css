@@ -202,6 +202,14 @@ label{
   font-size: 17px;
   white-space: nowrap;
   margin: auto;
+
+  background: linear-gradient(to right, pink 50%, black 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .27s ease-out;
+}
+label:hover, label:active {
+  background-position: left bottom;
 }
 
 
