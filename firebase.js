@@ -39,7 +39,6 @@ createUserWithEmailAndPassword(auth, email, password)
             username,
             email,
           });
-        alert('cock')
         window.location.assign("pages/index.html");
         // ...
     })
