@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-analytics.js";
-import { getDatabase } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-database.js";
+import { getDatabase, ref, push} from "https://www.gstatic.com/firebasejs/9.20.0/firebase-database.js";
 import { getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -25,7 +25,8 @@ const analytics = getAnalytics(app);
 const database = getDatabase(app);
 const auth = getAuth();
 const signUpButton = document.getElementById("signUp");
-
+const usersRef = ref(database, 'users');
+const newUserRef = push(usersRef);
 signUpButton.addEventListener("click", (e) => {
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
@@ -34,7 +35,15 @@ createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
+<<<<<<< HEAD
         window.location.assign("ChatSpace/dist/index.html");
+=======
+        push(usersRef, {
+            username,
+            email,
+          });
+        window.location.assign("pages/index.html");
+>>>>>>> 99390becd76c938619b80ea6edbce3063d6b0251
         // ...
     })
     .catch((error) => {
@@ -45,3 +54,9 @@ createUserWithEmailAndPassword(auth, email, password)
     });
 });
 
+function writeUserData(username, email) {
+    usersRef.set({
+      username: username,
+      email: email
+    });
+  }
