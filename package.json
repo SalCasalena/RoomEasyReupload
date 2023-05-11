@@ -1,5 +1,21 @@
 {
   "dependencies": {
-    "sass": "^1.62.0"
+    "@types/socket.io": "^3.0.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "sass": "^1.62.0",
+    "socket.io": "^4.6.1"
+  },
+  "name": "roomeasy-website",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "devStart": "nodemon Chatspace/dist/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }

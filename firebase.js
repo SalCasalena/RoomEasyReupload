@@ -34,7 +34,7 @@ createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        window.location.assign("pages/index.html");
+        window.location.assign("ChatSpace/dist/index.html");
         // ...
     })
     .catch((error) => {
