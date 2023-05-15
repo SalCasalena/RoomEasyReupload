@@ -2,7 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-analytics.js";
 import { getDatabase, ref, push} from "https://www.gstatic.com/firebasejs/9.20.0/firebase-database.js";
-import { getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -35,15 +35,12 @@ createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-<<<<<<< HEAD
         window.location.assign("ChatSpace/dist/index.html");
-=======
         push(usersRef, {
             username,
             email,
           });
         window.location.assign("pages/index.html");
->>>>>>> 99390becd76c938619b80ea6edbce3063d6b0251
         // ...
     })
     .catch((error) => {
@@ -60,3 +57,23 @@ function writeUserData(username, email) {
       email: email
     });
   }
+
+function login(email, password)
+ {
+  return signInWithEmailAndPassword(auth, email, password)
+}
+
+function pullUserData() {
+  return new Promise((resolve, reject) => {
+    // Reference to the 'users' segment in the database
+    const usersRef = ref(database, 'users');
+
+    // Listen for changes in the 'users' segment
+    onValue(usersRef, (snapshot) => {
+      const userData = snapshot.val();
+      resolve(userData);
+    }, (error) => {
+      reject(error);
+    });
+  });
+}
