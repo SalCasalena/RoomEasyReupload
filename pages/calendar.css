@@ -1,0 +1,24 @@
+#CalendarField {
+  background-color: aquamarine;
+}
+
+#SideField {
+  background-color: #69ebff;
+}
+
+.date-box {
+  background-color: #cdf7e9;
+  height: 120px;
+  width: 120px;
+}
+
+.side-box{
+  background-color: #cdf2f7;
+  width: 400px;
+  height: 900px;
+}
+
+
+th {
+  text-align: center;
+}
