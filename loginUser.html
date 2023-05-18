@@ -3,7 +3,7 @@
         <title>Login</title>
         <link rel="stylesheet" href="./main.css"> 
         <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.ico">
-        <script src ="firebase.js" type="module"></script>
+        <script src ="loginUser.js" type="module"></script>
     </head>
     <div id="bg" class="area">
         <ul class="circles">
@@ -36,7 +36,7 @@
                 <div id="form_content_container">
                     <div id="form_content_inner_container">
                         <div class="form-field">
-                        <input type="text" id="username" name ="username" placeholder="Username" />
+                        <input type="text" id="email" name ="email" placeholder="Email" />
                         </div>
                         
 
@@ -47,7 +47,7 @@
                         
                         <br>
 
-                        <label for="signUp">
+                        <label for="loginButton">
                             Log In
                         </label>
                         <br>
@@ -64,7 +64,7 @@
         </div>
         </form>
         <div class="button-field">
-            <button style="display: none" class="btn" type="submit" id="signUp">Log in</button>
+            <button style="display: none" class="btn" type="submit" id="loginButton">Log in</button>
         </div>
         <div class="button-field">
             <button style="display: none" class="btn" type="submit" id="register" onclick="" >Register</button>
