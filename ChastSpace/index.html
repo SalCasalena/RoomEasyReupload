@@ -5,12 +5,11 @@
   <title>Room Easy</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="./Chatstyle.css">
-  <script defer src="script.js"></script>
   <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script src ="main.js" type="module"></script>
   
 </head>
 <body>
-<!-- partial:index.partial.html -->
 <div class="app-container">
   <div class="app-left">
     <div class="app-left-header">
@@ -99,6 +98,7 @@
             This is the GRAY box
           </div>
           <span>9h ago</span>
+          
         </div>
       </div>
       
@@ -120,8 +120,8 @@
       
 
         <input type="text" class="chat-input" id ="message-input" placeholder="Enter your message here">
-
-      <button type = "submit" id = "send-button" class="chat-send-btn">Send</button>
+        <button type = "submit" id = "send-button" class="chat-send-btn">Send</button>
+        
     </div>
   </form>
 <!--Chat DIV-->
@@ -277,6 +277,5 @@
 </div>
 <!-- partial -->
   <script  src="./chat.js"></script>
-
 </body>
 </html>

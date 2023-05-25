@@ -305,10 +305,10 @@ form input {
    text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
-    #231557 0%,
-    #10ec7e 29%,
+    #12678f 0%,
+    pink 29%,
     #ff1361 67%,
-    #fff800 100%
+    purple 100%
   );
   background-size: auto auto;
   background-clip: border-box;
