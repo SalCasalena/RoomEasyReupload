@@ -9,7 +9,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #333541;
+    background: #192734;
 }
 
 * {
@@ -20,14 +20,17 @@
 
 }
 
+
 body,html {
 
     width: 100%;
     min-height: 100%;
     background-color: #242836;
     color: black;
+    justify-content: left;
 
 }
+
 
 .main-header {
 
@@ -95,15 +98,20 @@ a:hover {
 
 
 .card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 100px;
     margin-bottom: 100px;
+    /* margin-left: 100px; */
     height :  min-content;
     width: 1200px;
     border-radius: 30px;
-    background-color: #333541;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 40px 40px;
+    background-color: #12172d;
+
+    padding: 40px 50px 50px 40px;
+    border: 1px solid #477eff;
+    color: white;
 }
 
 .card .primary-heading {
@@ -138,6 +146,8 @@ a:hover {
     font-size: 2em;
     line-height: 35px;
 }
+
+
 
 @media only screen and (max-width: 1218px) {
     .card {
@@ -243,3 +253,4 @@ a:hover {
         font-size: 2em;
     }
 }
+
