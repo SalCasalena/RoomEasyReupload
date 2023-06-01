@@ -40,7 +40,7 @@ createUserWithEmailAndPassword(auth, email, password)
             username,
             email,
           });
-        window.location.assign("pages/index.html");
+        window.location.assign("../dist/index.html");
         // ...
     })
     .catch((error) => {
