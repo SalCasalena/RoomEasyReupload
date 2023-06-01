@@ -31,7 +31,7 @@ io.on("connection", socket => {
     socket.join('room1');
     socket.on('message', message => {
         io.to("room1").emit('receiveMessage', {
-            userID: socket.id,
+            userId: socket.id,
             message: message
         })
     })

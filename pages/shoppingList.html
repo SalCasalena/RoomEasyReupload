@@ -1,36 +1,98 @@
-<html lang="en">
-  <link rel="stylesheet" href="../ChastSpace/Chatstyle.css">
+<!DOCTYPE html>
+<html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Shopping List</title>
-  <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.ico">
-  <link rel="stylesheet" href="./style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script>
-    $(function(){
-      $('#RoomEasyNav').load('../components/navBar.html');
-    });
-  </script>
+  <title>CodePen - Shopping List </title>
+  <meta name="viewport" content="width=device-width, user-scalable=no"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="shoppingList.css">
+	<link rel="stylesheet" href="../components/navBar2.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  
 </head>
 
 <body>
+<!-- partial:index.partial.html -->
+<html ng-app="root">
+	<div id="RoomEasyNav2"></div>
+	<div class="container" ng-controller="index">
 
-  <div id="RoomEasyNav"></div>
-  <section class="block">
-    <div class="sticky">
-      <div class="note">
-        <div class="head">My Notes</div>
-        <div class="title">
-          <input type="text" name="title" class='snote' placeholder="Enter Title">
-        </div>
-        <div class="content">
-          <textarea name="note" placeholder="Add Sticky Note..."></textarea>
-        </div>
-      </div>
-  </section>
+		  <div class="box margin-right" id="shopping-list">
+		    <h1>My Shopping List</h1>
+		    
+		    <div id="errorMessage"><i class="icon-cross"></i>Please enter all inputs!</div>
+		    
+		    <div id="successMessage"><i class="icon-checkmark"></i>Item added to shopping list!</div>
+		    
+		    <div class="half margin-right">
+		     <input type='text'   class="searchButton" placeholder='Item Name' ng-model="itemName" autofocus required>
+		    </div><div class="half"><input type='text'   class="searchButton" placeholder='Shop Name' ng-model="itemShop" required></div>
+		     <div class="half margin-right">
+		     	<input type='number' class="searchButton margin-right" placeholder='Quantity' ng-model="itemQuantity" required>
+		    </div><div class="dollar half"> 
+		      <span>$</span>
+		      <input type='number' class="searchButton" placeholder='Price (each)' ng-model="itemPrice" required>
+		    </div>
+		    
+		    <button id="addItem" ng-click="addItem()">Add Item</button>
+		
+		    <div class="list">
+		      <table border="0" cellspacing="0">
+		        <tr class="table-header">
+		          <td></td>
+		          <td class="left">Item Name</td>
+		          <td class="left">Shop</td>
+		          <td>Quantity</td>
+		          <td class="center">Price</td>
+		          <td class="center">Delete</td>
+		        </tr>
+		        <tr ng-repeat="item in list | orderBy: '-checked':true">
+		          <td><input ng-show="!item.checked" ng-checked="item.checked" ng-click="add(item, list)" type='checkbox' checklist-value="item.checked"></td>
+		          <td ng-class="{selected: item.checked==true}">{{item.name}}</td>
+		          <td ng-class="{selected: item.checked==true}" class="left">{{item.shop}}</td>
+		          <td ng-class="{selected: item.checked==true}" class="center">{{item.quantity}}</td>
+		          <td ng-class="{selected: item.checked==true}">{{item.price | currency}}</td>
+		          <td><i class="icon-cross delete" ng-click="remove(item)"></i></td>
+		        </tr>
+		      </table>
+		      <div ng-hide="list.length" class="center">Your shopping list is empty.</div>
+		      <div class="cost cf">
+		        <span class="left">Total Cost:</span>
+		        <span class="right" ng-class="{total: length!==0}">{{getTotal() | currency}}</span>
+		      </div>
+		      <button class="clear" ng-click="clearAll(list)">Clear Shopping List</button>
+		    </div>
+		  </div>
+		  
+		  <div class="box" id="inventory">
+		    <h1>Inventory</h1>
+		    <div class="list">
+		      <table border="0" cellspacing="0">
+		        <div ng-hide="inventory.length" class="center">Your inventory is empty.</div>
+		        <tr ng-repeat="item in inventory">
+		          <td>{{item.name}}</td>
+		          <td class="left">{{item.shop}}</td>
+		          <td class="center">{{item.quantity}}</td>
+		          <td class="center">{{item.price | currency}}</td>
+		          <td><i class="icon-cross delete" ng-click="removeInventory(item)"></i></td>
+		        </tr>
+		      </table>
+		      <button class="clear" ng-click="clearAll(inventory)">Clear Inventory</button>
+		  </div>
+		  </div>
+		</div>
+</html>
+<!-- partial -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$('#RoomEasyNav2').load('../components/navBar2.html');
+		});
+	</script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js'></script>
+<script  src="shoppingList.js"></script>
 
 </body>
-
 </html>

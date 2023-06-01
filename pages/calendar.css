@@ -1,5 +1,5 @@
 :root {
-  --primary-clr: #b38add;
+  --primary-clr: #fb887c;
 }
 * {
   margin: 0;
@@ -27,7 +27,7 @@ body {
   align-items: center;
   justify-content: center;
   padding-bottom: 30px;
-  background-color: #e2e1dc;
+  background-color: #192734;
 }
 .container {
   position: relative;
@@ -39,7 +39,8 @@ body {
   display: flex;
 
   border-radius: 10px;
-  background-color: #373c4f;
+  border: 1px solid #477eff;
+  background-color: #12172d;
 }
 .left {
   width: 60%;
@@ -129,7 +130,7 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--primary-clr);
+  color: #3f5872;
   border: 1px solid #f5f5f5;
 }
 .calendar .days .day:nth-child(7n + 1) {
@@ -537,22 +538,3 @@ body {
   }
 }
 
-.credits {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  padding: 10px;
-  font-size: 12px;
-  color: #fff;
-  background-color: #b38add;
-}
-.credits a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-}
-.credits a:hover {
-  text-decoration: underline;
-}
