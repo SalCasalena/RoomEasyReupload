@@ -12,12 +12,12 @@
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #242836;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #477eff;
   }
 
 * {
@@ -105,7 +105,7 @@ a:hover {
 .card {
     margin-top: 60px;
     margin-left: 200px;
-    height : 1000px;
+    height : 90vh;
     width: 1200px;
     border-radius: 30px;
     background-color: #12172d;
