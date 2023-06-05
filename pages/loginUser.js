@@ -41,7 +41,7 @@ const attemptLogin = async (email, password) => {
     const userCredential = signInWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
     alert('sign in successful')
-    window.location.assign("pages/index.html");
+    window.location.assign("../dist/index.html");
   } catch (error) {
     alert('sign in unsuccessful')
   }
