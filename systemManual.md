@@ -43,7 +43,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 This system manual provides a basic guide to install and troubleshoot the system. If you encounter any specific issues or errors not mentioned here, please refer to the system's documentation or contact the developer for further support.
 

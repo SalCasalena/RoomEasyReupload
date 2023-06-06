@@ -43,7 +43,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 Have you ever had trouble with roommates? Miscommunication involving chores, payments, or other headaches alike? Fortunately, the new website service RoomEasy is changing the way we live with roommates, creating an efficient and easy way to live.
 
