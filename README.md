@@ -86,7 +86,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://gitlab.cci.drexel.edu/fds23/60/team-4/roomeasy-website.git
    ```
 2. Install NPM packages
    ```sh
