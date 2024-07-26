@@ -115,7 +115,7 @@ Install Node.js by following the instructions provided for your specific operati
 
 ### If you have any undocumented questions or need further assistance, please feel free to contact the developer of the system:
 
-* Name: Noe Cifuentes - Lead Software Engineer
+* Name: Noe Cifuentes - Lead Backend Engineer
 * Email: nmc325@drexel.edu
 
 
